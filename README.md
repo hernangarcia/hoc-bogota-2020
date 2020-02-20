@@ -9,6 +9,7 @@ Una vez en la consola de *Cloud9*, presiona el botón color naranja "*Create Env
 Al cargar la siguiente pantalla, completa los datos solicitados. Ingresa un nombre para tu ambiente de desarrollo (por ejemplo "HoC Bogotá 2020"). La descripción es opcional.
 
 ![enter image description here](https://raw.githubusercontent.com/hernangarcia/how-to-hugo-aws-amplify/master/images/Screenshot%202020-02-19%2017.24.39.png)
+
 Presiona el botón "*Next Step*"
 
 En la pantalla "*Configure Settings*", usa la siguiente configuración:
@@ -179,4 +180,4 @@ Regresa a la consola de Amplify en tu navegador web. Espera que el indicador de 
 
     https://master.xxxxxxxx.amplifyapp.com/
 
-**:clap: :clap: Has completado la primera parte de la actividad :clap: :clap:**
+**:clap: :clap: Ya tienes tu propio Blog en la internet :clap: :clap:**
