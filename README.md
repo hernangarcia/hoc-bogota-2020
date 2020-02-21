@@ -85,7 +85,7 @@ Vamos a editar la configuración de  tu nuevo website para que use estos datos d
  **2.** Cambia el valor del parámetro "title" por el nombre que quieras colocarle a tu blog. Por 
 ejemplo "Mi querido blog".
  **3.** Elimina la linea donde se encuentra el parámetro "*themesDir*"
- **4.** Presiona la tecla "*control*" + la tecla con la letra "*o*" y luego la tecla "*control*" + la tecla con la letra "*x*"
+ **4.** Presiona la tecla "*control*" + la tecla con la letra "*o*", luego "*enter*" y luego la tecla "*control*" + la tecla con la letra "*x*"
 
 Probemos cómo se ve tu nuevo blog. En el menú superior de tu ambiente de desarrollo, presiona "*Preview*" y luego "*Preview Running Application*"
 
@@ -166,7 +166,7 @@ el siguiente comando: `nano config.toml`
  2. Una vez que abras el archivo, reemplaza el valor de "*baseURL*" con el URL de Amplify. Quedará
 algo como esto: `baseURL = "https://master.xxxxxxxxx.amplifyapp.com"`
 
-Presiona la tecla "*control*" + la tecla con la letra "*o*" y luego la tecla "*control*" + la tecla con la letra "*x*".
+Presiona la tecla "*control*" + la tecla con la letra "*o*", luego "*enter*" y luego la tecla "*control*" + la tecla con la letra "*x*".
 
 Ejecuta los siguientes comandos para publicar tus cambios en la internet:
 
