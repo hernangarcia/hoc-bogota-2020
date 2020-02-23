@@ -1,17 +1,19 @@
 ¿Sabes qué quieren las personas de las experiencias digitales que consumen en internet? 
+
 Rapidez y facilidad.
 
 ¿Sabes qué quieren todas las empresas de la tecnología en la que confían para ofrecer estas experiencias día tras día?
+
 Flexibilidad, escalabilidad, mantenibilidad y seguridad.
 
 En este workshop, aprenderás a utilizar las herramientas y tecnologías que usan mujeres y hombres en empresas como Nasa, Nike, Spotify, Pinterest, para crear estas experiencias digitales.
 | | |
 |--|--|
 |![github](https://desktop.github.com/images/desktop-icon.svg)|Github: te permitirá almacenar el código fuente de las aplicaciones o websites que crees.|
-| ![Cloud9](https://miro.medium.com/max/800/1*m5onLChZ5V9V8RW5Bpoq3w.png) | Cloud9: es un ambiente de desarrollo integrado (IDE) basado en la nube que te permite escribir, ejecutar y depurar tu código sólo con un navegador web. |
-|![Hugo](https://d33wubrfki0l68.cloudfront.net/c38c7334cc3f23585738e40334284fddcaf03d5e/2e17c/images/hugo-logo-wide.svg)|Hugo: es un generador de contenido estático para construir websites y aplicaciones en internet.|
-| ![enter image description here](https://raw.githubusercontent.com/hernangarcia/how-to-hugo-aws-amplify/master/images/Screenshot%202020-02-22%2023.30.04.png) | StackEdit: El editor para crear y dar formato a tu código fuente. |
-| ![enter image description here](https://pbs.twimg.com/profile_images/1114309924551417856/FKA4cm2x_400x400.png) | AWS Amplify: es una plataforma de desarrollo para la creación y publicación de aplicaciones móviles y web. |
+| ![Cloud9](https://raw.githubusercontent.com/hernangarcia/how-to-hugo-aws-amplify/master/images/cloud9.png)| Cloud9: es un ambiente de desarrollo integrado (IDE) basado en la nube que te permite escribir, ejecutar y depurar tu código sólo con un navegador web. |
+|![Hugo](https://raw.githubusercontent.com/hernangarcia/how-to-hugo-aws-amplify/master/images/hugo.png)|Hugo: es un generador de contenido estático para construir websites y aplicaciones en internet.|
+| ![enter image description here](https://raw.githubusercontent.com/hernangarcia/how-to-hugo-aws-amplify/master/images/stackedit.png) | StackEdit: El editor para crear y dar formato a tu código fuente. |
+| ![amplify](https://raw.githubusercontent.com/hernangarcia/how-to-hugo-aws-amplify/master/images/amplify.png) | AWS Amplify: es una plataforma de desarrollo para la creación y publicación de aplicaciones móviles y web. |
 
 ---
 
