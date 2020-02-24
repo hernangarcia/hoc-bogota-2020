@@ -1,12 +1,5 @@
-¿Sabes qué quieren las personas de las experiencias digitales que consumen en internet? 
+En este laboratorio, aprenderás a utilizar las herramientas y tecnologías que usan mujeres y hombres en empresas como Nasa, Nike, Spotify, Pinterest, para crear estas experiencias digitales.
 
-Rapidez y facilidad.
-
-¿Sabes qué quieren todas las empresas de la tecnología en la que confían para ofrecer estas experiencias día tras día?
-
-Flexibilidad, escalabilidad, mantenibilidad y seguridad.
-
-En este workshop, aprenderás a utilizar las herramientas y tecnologías que usan mujeres y hombres en empresas como Nasa, Nike, Spotify, Pinterest, para crear estas experiencias digitales.
 | | |
 |--|--|
 |![github](https://desktop.github.com/images/desktop-icon.svg)|Github: te permitirá almacenar el código fuente de las aplicaciones o websites que crees.|
