@@ -126,8 +126,8 @@ Refresca la ventana de "*Preview*". Deberías ver tu nuevo website :clap: :confe
 Regresa a tu ambiente de desarrollo, presiona el icono "+" y luego "*New Terminal*". En este nuevo terminal, ejecuta los siguientes comandos:
 
     cd myblog
-    hugo new posts/hoc-bog-2020.md
-    nano /home/ubuntu/environment/myblog/content/posts/hoc-bog-2020.md
+    hugo new post/hoc-bog-2020.md
+    nano /home/ubuntu/environment/myblog/content/post/hoc-bog-2020.md
 
 Edita tu nuevo post con la información que quieras:
 
