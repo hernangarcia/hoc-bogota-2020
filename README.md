@@ -45,16 +45,16 @@ Tu ambiente de desarrollo para hacer y deshacer :smirk: estará listo en unos do
 
 En tu navegador de internet, visita [github.com](https://github.com)
 
-Si no tienes una cuenta, completa el formulario de registro con el nombre de usuario que desees,
-un correo válido y una contraseña.
+Si no tienes una cuenta, completa el formulario de registro con el nombre de usuario que desees, un correo válido y una contraseña. 
 
 ![enter image description here](https://raw.githubusercontent.com/hernangarcia/how-to-hugo-aws-amplify/master/images/Screenshot%202020-02-19%2018.29.46.png)
 
 Una vez que inicies sesión, en el menú de la izquierda, presiona el botón verde "*New*".
+
 ![enter image description here](https://raw.githubusercontent.com/hernangarcia/how-to-hugo-aws-amplify/master/images/Screenshot%202020-02-19%2018.32.04.png)
 
 En la pantalla "*Create a New Repository*", en "Repository name" ingresa el nombre
-que desees (por ejemplo "hoc-bogota-2020")
+	que desees (por ejemplo "hoc-bogota-2020"). Deja el resto de los valores por defecto y presiona "*Create Repository*"
 
 ![enter image description here](https://raw.githubusercontent.com/hernangarcia/how-to-hugo-aws-amplify/master/images/Screenshot%202020-02-19%2018.33.41.png)
 
@@ -96,6 +96,10 @@ Agreguemos algunos datos de prueba a tu blog, ejecutando estos comandos:
     cp -R themes/gohugo-theme-ananke/exampleSite/static/* ./static
     cp themes/gohugo-theme-ananke/static/images/gohugo-default-sample-hero-image.jpg ./static/images/
 
+Tu ambiente de desarrollo debería lucir como la siguiente imagen. A la izquierda verás los directorios que conforman tu website.
+
+![enter image description here](https://raw.githubusercontent.com/hernangarcia/how-to-hugo-aws-amplify/master/images/aux2.png)
+
 Vamos a editar la configuración de  tu nuevo website para que use estos datos de prueba:
 
  **1.** Abre el archivo de configuración de HUGO usando el comando más
@@ -103,19 +107,21 @@ Vamos a editar la configuración de  tu nuevo website para que use estos datos d
     
 ![enter image description here](https://raw.githubusercontent.com/hernangarcia/how-to-hugo-aws-amplify/master/images/Screenshot%202020-02-19%2018.48.32.png)
 
- **2.** Cambia el valor del parámetro "title" por el nombre que quieras colocarle a tu blog. Por 
-ejemplo "Mi querido blog".
+ **2.** Cambia el valor del parámetro "title" por el nombre que quieras colocarle a tu blog. Por ejemplo "Mi querido blog".
  **3.** Elimina la linea donde se encuentra el parámetro "*themesDir*"
  **4.** Presiona la tecla "*control*" + la tecla con la letra "*o*", luego "*enter*" y luego la tecla "*control*" + la tecla con la letra "*x*"
 
 Probemos cómo se ve tu nuevo blog. En el menú superior de tu ambiente de desarrollo, presiona "*Preview*" y luego "*Preview Running Application*"
 
+![enter image description here](https://raw.githubusercontent.com/hernangarcia/how-to-hugo-aws-amplify/master/images/aux3.png)
+
 De la ventana que se abre, copia el url que está en la barra de navegación; uno parecido a este:
 
     https://xxxxxxxxx.vfs.cloud9.us-east-1.amazonaws.com
 
-En el siguiente comando, reemplaza el valor de "*--baseURL*" con el url que copiaste anteriormente,
-y ejecuta en tu terminal:
+![enter image description here](https://raw.githubusercontent.com/hernangarcia/how-to-hugo-aws-amplify/master/images/aux4.png)
+
+En el siguiente comando, reemplaza el valor de "*--baseURL*" con el url que copiaste anteriormente, y ejecuta en tu terminal:
 
     hugo server --bind=0.0.0.0 --baseURL=https://xxxxxxxxx.vfs.cloud9.us-east-1.amazonaws.com -p 8080
 
@@ -203,3 +209,4 @@ Regresa a la consola de Amplify en tu navegador web. Espera que el indicador de 
     https://master.xxxxxxxx.amplifyapp.com/
 
 **:clap: :clap: Ya tienes tu propio Blog en la internet :clap: :clap:**
+
