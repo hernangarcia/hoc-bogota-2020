@@ -67,9 +67,10 @@ Regresa a tu ambiente de desarrollo en la consola de AWS, en la barra superior s
 "*New terminal*".
 
 **Instala HUGO:**
-Ejecuta los siguientes comando en tu terminal
+Ejecuta los siguientes comando en tu terminal para descargar la última versión de Hugo e instalarla en tu ambiente de desarrollo:
 
     wget https://github.com/gohugoio/hugo/releases/download/v0.64.1/hugo_0.64.1_Linux-64bit.deb
+    
     sudo dpkg -i hugo_0.64.1_Linux-64bit.deb
 
 Verifica que HUGO está instalado, usando este comando:
@@ -87,31 +88,36 @@ Agrega un theme a tu nuevo website para que se vea mucho mejor. Ingresa al direc
 Descarga el componente que transforma tu nuevo site en un Blog:
 
     git init
+    
     git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/gohugo-theme-ananke
 
 Agreguemos algunos datos de prueba a tu blog, ejecutando estos comandos:
 
     cp themes/gohugo-theme-ananke/exampleSite/config.toml .
+
     cp -R themes/gohugo-theme-ananke/exampleSite/content/* ./content
+
     cp -R themes/gohugo-theme-ananke/exampleSite/static/* ./static
+
     cp themes/gohugo-theme-ananke/static/images/gohugo-default-sample-hero-image.jpg ./static/images/
 
-Tu ambiente de desarrollo debería lucir como la siguiente imagen. A la izquierda verás los directorios que conforman tu website.
+Tu ambiente de desarrollo debería lucir como la siguiente imagen. A la izquierda verás los directorios que conforman tu website. En esa estructura de directorios es donde vamos a estar trabajando.
 
 ![enter image description here](https://raw.githubusercontent.com/hernangarcia/how-to-hugo-aws-amplify/master/images/aux2.png)
 
 Vamos a editar la configuración de  tu nuevo website para que use estos datos de prueba:
 
- **1.** Abre el archivo de configuración de HUGO usando el comando más
-    abajo: `nano config.toml`
-    
-![enter image description here](https://raw.githubusercontent.com/hernangarcia/how-to-hugo-aws-amplify/master/images/Screenshot%202020-02-19%2018.48.32.png)
+ **1.** En el listado de archivos a tu izquierda, abre el archivo de configuración de HUGO haciendo click en el que se llama "*config.toml*"
 
  **2.** Cambia el valor del parámetro "title" por el nombre que quieras colocarle a tu blog. Por ejemplo "Mi querido blog".
+ 
  **3.** Elimina la linea donde se encuentra el parámetro "*themesDir*"
- **4.** Presiona la tecla "*control*" + la tecla con la letra "*o*", luego "*enter*" y luego la tecla "*control*" + la tecla con la letra "*x*"
+ 
+ Deja el resto de los valores por defecto. Usa la siguiente imagen como ejemplo:
+ 
+![enter image description here](https://raw.githubusercontent.com/hernangarcia/how-to-hugo-aws-amplify/master/images/Screenshot%202020-02-24%2016.41.48.png)
 
-Probemos cómo se ve tu nuevo blog. En el menú superior de tu ambiente de desarrollo, presiona "*Preview*" y luego "*Preview Running Application*"
+Probemos cómo se ve tu nuevo website. En el menú superior de tu ambiente de desarrollo, presiona "*Preview*" y luego "*Preview Running Application*"
 
 ![enter image description here](https://raw.githubusercontent.com/hernangarcia/how-to-hugo-aws-amplify/master/images/aux3.png)
 
@@ -129,30 +135,48 @@ Refresca la ventana de "*Preview*". Deberías ver tu nuevo website :clap: :confe
 
 ## **Vamos a crear tu primer post.**
 
-Regresa a tu ambiente de desarrollo, presiona el icono "+" y luego "*New Terminal*". En este nuevo terminal, ejecuta los siguientes comandos:
+En el listado de archivos a tu izquierda, abre la carpeta llamada "*content*" y luego abre la carpeta llamada "*post*". Con el cursor del mouse sobre la carpeta "*post*", haz un click derecho para desplegar el menú auxiliar y presiona "*New File*".
 
-    cd myblog
-    hugo new post/hoc-bog-2020.md
-    nano /home/ubuntu/environment/myblog/content/post/hoc-bog-2020.md
+![enter image description here](https://github.com/hernangarcia/how-to-hugo-aws-amplify/blob/master/images/Screenshot%202020-02-24%2016.48.09.png?raw=true)
 
-Edita tu nuevo post con la información que quieras:
+Cuando se agregue el nuevo archivo, dale el nombre que desees, por ejemplo "*hoc-bog-2020.md*" y presiona la tecla "*enter*" (recuerda, el nombre puede ser el que desees, sim embargo la extensión debe ser "*.md*").
 
-![enter image description here](https://raw.githubusercontent.com/hernangarcia/how-to-hugo-aws-amplify/master/images/Screenshot%202020-02-19%2019.10.20.png)
-Usando el atributo "featured_image", puedes agregar una imagen en el tope de tu publicación.
+![enter image description here](https://raw.githubusercontent.com/hernangarcia/how-to-hugo-aws-amplify/master/images/Screenshot%202020-02-24%2016.52.06.png)
 
-Usa los elementos [en este enlace](https://www.markdownguide.org/cheat-sheet/) para escribir el contenido de la manera que desees. 
+Para crear el contenido de tu primera publicación de manera visual, vamos a usar StackEdit. En una nueva ventana en tu navegador web, ingresa a stackedit.io y presiona "*Start Writing*".
 
-Por ejemplo, puedes usar `![alt text](url-to-the-image.jpg)` para agregar una imagen donde quieras.
+![enter image description here](https://raw.githubusercontent.com/hernangarcia/how-to-hugo-aws-amplify/master/images/Screenshot%202020-02-24%2016.56.22.png)
+
+StackEdit es un editor visual de Markdown. Markdown es un lenguaje que permite crear publicaciones usando un formato de texto plano, fácil de leer y fácil de escribir, y que luego puede ser convertido a HTML para publicar en internet. Empresas como Amazon, Nasa y Nike usan Markdown para generar contenido.
+
+Una vez que esté abierto el editor de StackEdit, vas a encontrar una pantalla como la siguiente:
+
+![enter image description here](https://raw.githubusercontent.com/hernangarcia/how-to-hugo-aws-amplify/master/images/Screenshot%202020-02-24%2017.55.12.png)
+
+Como en la imagen anterior, a tu mano izquierda vas a encontrar contenido de ejemplo escrito usando Markdown; ahí es donde vas a crear tu primera publicación. A tu derecha, puedes ver cómo lucirá el contenido en realidad.
+
+Borra todo el contenido del editor: con el cursor en la ventana de edición, presiona el botón derecho de tu mouse, luego selecciona "*Select All*" y presiona la tecla de borrar en tu teclado.
+
+Ingresa a [este enlace](https://raw.githubusercontent.com/hernangarcia/how-to-hugo-aws-amplify/master/markdown-samples/sample-1.md) y copia el contenido que ves; para esto selecciona todo el texto, presiona el botón derecho de tu mouse y selecciona "*Copy*".
+
+Regresa a la ventana del navegador donde está tu ambiente de desarrollo, busca el archivo que creaste (puedes haber usado "*hoc-bog-2020.md*" como nombre). Una vez esté ahí el cursor de tu mouse, presiona el botón derecho y selecciona "*Paste*".
+
+![enter image description here](https://raw.githubusercontent.com/hernangarcia/how-to-hugo-aws-amplify/master/images/Screenshot%202020-02-24%2023.28.06.png)
 
 Ejecuta el siguiente comando de nuevo para visualizar tus cambios (recuerda usar el baseURL correcto):
 
     hugo server --bind=0.0.0.0 --baseURL=https://xxxxxxxxx.vfs.cloud9.us-east-1.amazonaws.com -p 8080
 
-Vamos a guardar los cambios en tu repositorio de manera permanente:
+**¡Usa tu imaginación y modifica la publicación con el contenido que desees!**
+
+Cuando termines, guarda los cambios en tu repositorio de manera permanente:
 
     git add .
+    
     git commit -m "mi primer post"
+    
     git remote add origin https://github.com/<github-username>/<github-repository-name>.git
+    
     git push -u origin master
 
 En el comando anterior sustituye *github-username* y *github-repository-name* con los valores
@@ -209,4 +233,3 @@ Regresa a la consola de Amplify en tu navegador web. Espera que el indicador de 
     https://master.xxxxxxxx.amplifyapp.com/
 
 **:clap: :clap: Ya tienes tu propio Blog en la internet :clap: :clap:**
-
