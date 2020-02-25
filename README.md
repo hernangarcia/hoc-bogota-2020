@@ -1,4 +1,4 @@
-En este laboratorio, aprenderás a utilizar las herramientas y tecnologías que usan mujeres y hombres en empresas como Nasa, Nike, Spotify, Pinterest, para crear experiencias digitales.
+En este laboratorio, aprenderás a utilizar las herramientas y tecnologías que usan mujeres y hombres en empresas como Nasa, Nike, Spotify, Pinterest, para crear experiencias digitales que son usadas por millones de personas alrededor del mundo.
 
 | | |
 |--|--|
