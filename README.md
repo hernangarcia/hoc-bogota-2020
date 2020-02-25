@@ -119,7 +119,7 @@ Vamos a editar la configuración de  tu nuevo website para que use estos datos d
  
  **3.** Elimina la linea donde se encuentra el parámetro "*themesDir*"
  
- Deja el resto de los valores por defecto. Usa la siguiente imagen como ejemplo:
+ Deja el resto de los valores por defecto. Presiona las teclas "*control*" y la tecla con la letra "*s*" al mismo tiempo para guardar el archivo. Usa la siguiente imagen como ejemplo:
  
 ![enter image description here](https://raw.githubusercontent.com/hernangarcia/how-to-hugo-aws-amplify/master/images/Screenshot%202020-02-24%2016.41.48.png)
 
@@ -212,23 +212,27 @@ Presiona "Continue" y a continuación, selecciona el repositorio que creamos al 
 
 ![enter image description here](https://raw.githubusercontent.com/hernangarcia/how-to-hugo-aws-amplify/master/images/Screenshot%202020-02-19%2019.31.19.png)
 	
-Configura los ajustes para construir tu website, ingresando el nombre que desees. 
+Configura los ajustes para construir tu website, ingresando el nombre que desees. Deja el resto de los valores por defecto y presiona el botón "*Next*".
 
-Presiona "*Next*", revisa tu configuración y luego presiona "*Save and Deploy*".
+![enter image description here](https://raw.githubusercontent.com/hernangarcia/how-to-hugo-aws-amplify/master/images/Screenshot%202020-02-25%2000.08.42.png)
 
-Espera que el indicador de progreso esté en "*Verify*". Luego, presiona el enlace al final
-de la sección "Frontend Environments", uno parecido a este:
+Luego presiona "*Save and Deploy*" y espera que el indicador de progreso esté en "*Verify*". 
+
+![enter image description here](https://raw.githubusercontent.com/hernangarcia/how-to-hugo-aws-amplify/master/images/Screenshot%202020-02-25%2000.03.44.png)
+
+Ahora que tu website está en internet, para visitarlo presiona el enlace al final de la sección "*master*", uno parecido a este:
 
     https://master.xxxxxxxx.amplifyapp.com/
 
-Si encuentras algún error relacionado a las imágenes en tu blog, sigue los siguientes pasos:
+Luego de inspeccionar tu website, si encuentras algún error relacionado a las imágenes en tu blog, sigue los siguientes pasos:
 
- 1. Ve a tu ambiente de desarrollo y edita el archivo de configuración de tu website, usando
-el siguiente comando: `nano config.toml`
- 2. Una vez que abras el archivo, reemplaza el valor de "*baseURL*" con el URL de Amplify. Quedará
-algo como esto: `baseURL = "https://master.xxxxxxxxx.amplifyapp.com"`
+ 1. En el listado de archivos a tu izquierda, abre el archivo de configuración de HUGO haciendo click en el que se llama "*config.toml*"
 
-Presiona la tecla "*control*" + la tecla con la letra "*o*", luego "*enter*" y luego la tecla "*control*" + la tecla con la letra "*x*".
+ 2. Una vez que abras el archivo, reemplaza el valor de "*baseURL*" con el URL de Amplify. Quedará algo como esto: 
+
+    `baseURL = "https://master.xxxxxxxxx.amplifyapp.com"`
+
+Presiona la tecla "*control*" + la tecla con la letra "*s*", al mismo tiempo, para guardar la modificación.
 
 Ejecuta los siguientes comandos para publicar tus cambios en la internet:
 
@@ -240,7 +244,11 @@ Ejecuta los siguientes comandos para publicar tus cambios en la internet:
 
 Ingresa tus credenciales de github si son solicitadas.
 
-Regresa a la consola de Amplify en tu navegador web. Espera que el indicador de progreso esté en "*Verify*". Luego, presiona el enlace al final de la sección "Frontend Environments", uno parecido a este:
+Regresa a la consola de Amplify en tu navegador web. Espera que el indicador de progreso esté en "*Verify*". 
+
+![enter image description here](https://raw.githubusercontent.com/hernangarcia/how-to-hugo-aws-amplify/master/images/Screenshot%202020-02-25%2000.03.44.png)
+
+Verifica de nuevo tu website, presionando el enlace al final de la sección "*master*", uno parecido a este:
 
     https://master.xxxxxxxx.amplifyapp.com/
 
