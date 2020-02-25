@@ -163,7 +163,7 @@ Como en la imagen anterior, a tu mano izquierda vas a encontrar contenido de eje
 
 Borra todo el contenido del editor: con el cursor en la ventana de edición, presiona el botón derecho de tu mouse, luego selecciona "*Select All*" y presiona la tecla de borrar en tu teclado.
 
-Ingresa a [este enlace](https://raw.githubusercontent.com/hernangarcia/how-to-hugo-aws-amplify/master/markdown-samples/sample-1.md) y copia el contenido que ves; para esto selecciona todo el texto, presiona el botón derecho de tu mouse y selecciona "*Copy*".
+Ingresa a <a href="https://raw.githubusercontent.com/hernangarcia/how-to-hugo-aws-amplify/master/markdown-samples/sample-1.md" target="_blank">este enlace</a> y copia el contenido que ves; para esto selecciona todo el texto, presiona el botón derecho de tu mouse y selecciona "*Copy*".
 
 Regresa a la ventana del navegador donde está tu ambiente de desarrollo, busca el archivo que creaste (puedes haber usado "*hoc-bog-2020.md*" como nombre). Una vez esté ahí el cursor de tu mouse, presiona el botón derecho y selecciona "*Paste*".
 
