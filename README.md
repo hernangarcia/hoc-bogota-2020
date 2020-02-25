@@ -49,12 +49,19 @@ Si no tienes una cuenta, completa el formulario de registro con el nombre de usu
 
 ![enter image description here](https://raw.githubusercontent.com/hernangarcia/how-to-hugo-aws-amplify/master/images/Screenshot%202020-02-19%2018.29.46.png)
 
-Una vez que inicies sesión, en el menú de la izquierda, presiona el botón verde "*New*".
+Luego de ingresar tus datos, presiona el botón "*Verify*" en la siguiente pantalla, resuelve el acertijo y presiona el botón azul con el texto "*Next: Select a plan*":
 
-![enter image description here](https://raw.githubusercontent.com/hernangarcia/how-to-hugo-aws-amplify/master/images/Screenshot%202020-02-19%2018.32.04.png)
+![enter image description here](https://raw.githubusercontent.com/hernangarcia/how-to-hugo-aws-amplify/master/images/Screenshot%202020-02-24%2023.39.08.png)
 
-En la pantalla "*Create a New Repository*", en "Repository name" ingresa el nombre
-	que desees (por ejemplo "hoc-bogota-2020"). Deja el resto de los valores por defecto y presiona "*Create Repository*"
+En la siguiente pantalla, presiona el botón azul que dice "*Choose free*"
+
+![enter image description here](https://raw.githubusercontent.com/hernangarcia/how-to-hugo-aws-amplify/master/images/Screenshot%202020-02-24%2023.39.42.png)
+
+Y por última, en la siguiente pantalla, presional el enlace con el texto "Skip this step" para terminar con el proceso de creación de la cuenta de Github.
+
+![enter image description here](https://raw.githubusercontent.com/hernangarcia/how-to-hugo-aws-amplify/master/images/Screenshot%202020-02-24%2023.40.11.png)
+
+En la pantalla "*Create a New Repository*", en "Repository name" ingresa el nombre que desees (por ejemplo "hoc-bogota-2020"). Deja el resto de los valores por defecto y presiona "*Create Repository*"
 
 ![enter image description here](https://raw.githubusercontent.com/hernangarcia/how-to-hugo-aws-amplify/master/images/Screenshot%202020-02-19%2018.33.41.png)
 
@@ -63,8 +70,7 @@ Deja abierta la siguiente pantalla, más adelante vas a necesitar los comandos q
 ![enter image description here](https://raw.githubusercontent.com/hernangarcia/how-to-hugo-aws-amplify/master/images/Screenshot%202020-02-19%2018.36.58.png)
 
 ## **Vamos a crear tu nuevo Blog**
-Regresa a tu ambiente de desarrollo en la consola de AWS, en la barra superior selecciona "Window" y presiona 
-"*New terminal*".
+Regresa a tu ambiente de desarrollo en la consola de AWS, en la barra superior selecciona "Window" y presiona "*New terminal*".
 
 **Instala HUGO:**
 Ejecuta los siguientes comando en tu terminal para descargar la última versión de Hugo e instalarla en tu ambiente de desarrollo:
@@ -161,6 +167,8 @@ Ingresa a [este enlace](https://raw.githubusercontent.com/hernangarcia/how-to-hu
 
 Regresa a la ventana del navegador donde está tu ambiente de desarrollo, busca el archivo que creaste (puedes haber usado "*hoc-bog-2020.md*" como nombre). Una vez esté ahí el cursor de tu mouse, presiona el botón derecho y selecciona "*Paste*".
 
+Finalmente, guarda la publicación presionando la tecla "*control*" y la tecla con la letra "*s*" al mismo tiempo.
+
 ![enter image description here](https://raw.githubusercontent.com/hernangarcia/how-to-hugo-aws-amplify/master/images/Screenshot%202020-02-24%2023.28.06.png)
 
 Ejecuta el siguiente comando de nuevo para visualizar tus cambios (recuerda usar el baseURL correcto):
@@ -169,7 +177,9 @@ Ejecuta el siguiente comando de nuevo para visualizar tus cambios (recuerda usar
 
 **¡Usa tu imaginación y modifica la publicación con el contenido que desees!**
 
-Cuando termines, guarda los cambios en tu repositorio de manera permanente:
+Cuando termines, guarda los cambios presionando la tecla "*control*" y la tecla con la letra "*s*" al mismo tiempo.
+
+Finalmente, guardemos la publicación en tu repositorio de manera permanente:
 
     git add .
     
@@ -223,7 +233,9 @@ Presiona la tecla "*control*" + la tecla con la letra "*o*", luego "*enter*" y l
 Ejecuta los siguientes comandos para publicar tus cambios en la internet:
 
     git add .
+
     git commit -m "changed baseURL"
+
     git push -u origin master
 
 Ingresa tus credenciales de github si son solicitadas.
