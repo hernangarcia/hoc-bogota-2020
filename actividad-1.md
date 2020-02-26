@@ -165,19 +165,19 @@ Borra todo el contenido del editor: con el cursor en la ventana de edición, pre
 
 En otra pestaña de tu navegador, ingresa a <a href="https://raw.githubusercontent.com/hernangarcia/how-to-hugo-aws-amplify/master/markdown-samples/sample-1.md" target="_blank">este enlace</a> y copia el contenido que ves; para esto selecciona todo el texto, presiona el botón derecho de tu mouse y selecciona "*Copy*".
 
-Regresa a la ventana del navegador donde está tu ambiente de desarrollo, busca el archivo que creaste (puedes haber usado "*hoc-bog-2020.md*" como nombre). Una vez esté ahí el cursor de tu mouse, presiona el botón derecho y selecciona "*Paste*".
+Regresa a la ventana de StackEdit y, en la ventana de edición, pega el texto que copiaste en el paso anterior usando el botón derecho de tu mouse para desplegar el menú de acciones y seleccionando "*Paste*".
 
-Finalmente, guarda la publicación presionando la tecla "*control*" y la tecla con la letra "*s*" al mismo tiempo.
+**¡Usa tu imaginación y modifica la publicación con el contenido que desees!**
+
+Regresa a la ventana del navegador donde está tu ambiente de desarrollo, busca el archivo que creaste para tu nueva publicación (puedes haber usado "*hoc-bog-2020.md*" como nombre). Una vez esté ahí el cursor de tu mouse, presiona el botón derecho y selecciona "*Paste*".
+
+Para ver como quedó, guarda la publicación presionando las teclas "*control*" y "*s*" al mismo tiempo.
 
 ![enter image description here](https://raw.githubusercontent.com/hernangarcia/how-to-hugo-aws-amplify/master/images/Screenshot%202020-02-24%2023.28.06.png)
 
 Ejecuta el siguiente comando de nuevo para visualizar tus cambios (recuerda usar el baseURL correcto):
 
     hugo server --bind=0.0.0.0 --baseURL=https://xxxxxxxxx.vfs.cloud9.us-east-1.amazonaws.com -p 8080
-
-**¡Usa tu imaginación y modifica la publicación con el contenido que desees!**
-
-Cuando termines, guarda los cambios presionando la tecla "*control*" y la tecla con la letra "*s*" al mismo tiempo.
 
 Finalmente, guardemos la publicación en tu repositorio de manera permanente:
 
