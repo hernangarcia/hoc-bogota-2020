@@ -73,7 +73,7 @@ Deja abierta la siguiente pantalla, más adelante vas a necesitar los comandos q
 Regresa a tu ambiente de desarrollo en la consola de AWS, en la barra superior selecciona "Window" y presiona "*New terminal*".
 
 **Instala HUGO:**
-Ejecuta los siguientes comando en tu terminal para descargar la última versión de Hugo e instalarla en tu ambiente de desarrollo:
+Ejecuta los siguientes comandos en tu terminal para descargar la última versión de Hugo e instalarla en tu ambiente de desarrollo. Es mejor si los ejecutas uno por uno para no equivocarte.
 
     wget https://github.com/gohugoio/hugo/releases/download/v0.64.1/hugo_0.64.1_Linux-64bit.deb
     
@@ -97,7 +97,7 @@ Descarga el componente que transforma tu nuevo site en un Blog:
     
     git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/gohugo-theme-ananke
 
-Agreguemos algunos datos de prueba a tu blog, ejecutando estos comandos:
+Agreguemos algunos datos de prueba a tu blog, ejecutando estos comandos. Es mejor si los ejecutas uno por uno para no equivocarte.
 
     cp themes/gohugo-theme-ananke/exampleSite/config.toml .
 
@@ -179,7 +179,7 @@ Ejecuta el siguiente comando de nuevo para visualizar tus cambios (recuerda usar
 
     hugo server --bind=0.0.0.0 --baseURL=https://xxxxxxxxx.vfs.cloud9.us-east-1.amazonaws.com -p 8080
 
-Finalmente, guardemos la publicación en tu repositorio de manera permanente:
+Finalmente, guardemos la publicación en tu repositorio de manera permanente, ejecutando los siguientes comandos. Es mejor si los ejecutas uno por uno para no equivocarte.
 
     git add .
     
@@ -234,7 +234,7 @@ Luego de inspeccionar tu website, si encuentras algún error relacionado a las i
 
 Presiona la tecla "*control*" + la tecla con la letra "*s*", al mismo tiempo, para guardar la modificación.
 
-Ejecuta los siguientes comandos para publicar tus cambios en la internet:
+Ejecuta los siguientes comandos, uno por uno, para publicar tus cambios en la internet:
 
     git add .
 
