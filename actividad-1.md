@@ -179,7 +179,9 @@ Ejecuta el siguiente comando de nuevo para visualizar tus cambios (recuerda usar
 
     hugo server --bind=0.0.0.0 --baseURL=https://xxxxxxxxx.vfs.cloud9.us-east-1.amazonaws.com -p 8080
 
-Finalmente, guardemos la publicación en tu repositorio de manera permanente, ejecutando los siguientes comandos. Es mejor si los ejecutas uno por uno para no equivocarte.
+Si está todo bien, en la misma venta donde donde ejecutaste el comando anterior, presiona las teclas "control" y "c" para detener la visualización de tu website. 
+
+Finalmente, guardemos la publicación en tu repositorio de manera permanente ejecutando los siguientes comandos. Es mejor si los ejecutas uno por uno para no equivocarte.
 
     git add .
     
