@@ -178,9 +178,11 @@ Regresa a la ventana de StackEdit y, en la ventana de edición, pega el texto qu
 
 Regresa a la ventana del navegador donde está tu ambiente de desarrollo, busca el archivo que creaste para tu nueva publicación (puedes haber usado "*hoc-bog-2020.md*" como nombre). Una vez esté ahí el cursor de tu mouse, presiona el botón derecho y selecciona "*Paste*".
 
-Para ver como quedó, guarda la publicación presionando las teclas "*control*" y "*s*" al mismo tiempo.
-
 ![enter image description here](https://raw.githubusercontent.com/hernangarcia/how-to-hugo-aws-amplify/master/images/Screenshot%202020-02-24%2023.28.06.png)
+
+Para ver como quedó, guarda el archivo; en el menú "*File*", busca y presiona la opción "*Save*":
+
+![enter image description here](https://raw.githubusercontent.com/hernangarcia/hoc-bogota-2020/master/images/Screenshot%202020-02-26%2016.55.19.png)
 
 Ejecuta el siguiente comando de nuevo para visualizar tus cambios (recuerda usar el baseURL correcto):
 
