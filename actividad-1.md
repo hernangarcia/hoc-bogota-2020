@@ -130,6 +130,7 @@ Para salvar el archivo, en el menú "*File*", busca y presiona la opción "*Save
 ![enter image description here](https://raw.githubusercontent.com/hernangarcia/hoc-bogota-2020/master/images/Screenshot%202020-02-26%2016.55.19.png)
 
 **Probemos cómo se ve tu nuevo website** 
+
 En el menú superior de tu ambiente de desarrollo, presiona "*Preview*" y luego "*Preview Running Application*"
 
 ![enter image description here](https://raw.githubusercontent.com/hernangarcia/how-to-hugo-aws-amplify/master/images/aux3.png)
@@ -148,19 +149,11 @@ Refresca la ventana de "*Preview*". Deberías ver tu nuevo website :clap: :confe
 
 ## **Vamos a crear tu primer post.**
 
-En el listado de archivos a tu izquierda, abre la carpeta llamada "*content*" y luego abre la carpeta llamada "*post*". Con el cursor del mouse sobre la carpeta "*post*", haz un click derecho para desplegar el menú auxiliar y presiona "*New File*".
-
-![enter image description here](https://github.com/hernangarcia/how-to-hugo-aws-amplify/blob/master/images/Screenshot%202020-02-24%2016.48.09.png?raw=true)
-
-Cuando se agregue el nuevo archivo, dale el nombre que desees, por ejemplo "*hoc-bog-2020.md*" y presiona la tecla "*enter*" (recuerda, el nombre puede ser el que desees, sim embargo la extensión debe ser "*.md*").
-
-![enter image description here](https://raw.githubusercontent.com/hernangarcia/how-to-hugo-aws-amplify/master/images/Screenshot%202020-02-24%2016.52.06.png)
-
 Para crear el contenido de tu primera publicación de manera visual, vamos a usar StackEdit. En una nueva ventana en tu navegador web, ingresa a stackedit.io y presiona "*Start Writing*".
 
 ![enter image description here](https://raw.githubusercontent.com/hernangarcia/how-to-hugo-aws-amplify/master/images/Screenshot%202020-02-24%2016.56.22.png)
 
-StackEdit es un editor visual de Markdown. Markdown es un lenguaje que permite crear publicaciones usando un formato de texto plano, fácil de leer y fácil de escribir, y que luego puede ser convertido a HTML para publicar en internet. Empresas como Amazon, Nasa y Nike usan Markdown para generar contenido.
+StackEdit es un editor visual de Markdown. Markdown es un lenguaje que permite crear publicaciones usando un formato de texto plano, fácil de leer y fácil de escribir, y que luego puede ser convertido a HTML para publicar en internet. Empresas como Amazon, Nasa y Nike usan Markdown para generar contenido que es visto por billones de personas.
 
 Una vez que esté abierto el editor de StackEdit, vas a encontrar una pantalla como la siguiente:
 
@@ -176,7 +169,19 @@ Regresa a la ventana de StackEdit y, en la ventana de edición, pega el texto qu
 
 **¡Usa tu imaginación y modifica la publicación con el contenido que desees!**
 
-Regresa a la ventana del navegador donde está tu ambiente de desarrollo, busca el archivo que creaste para tu nueva publicación (puedes haber usado "*hoc-bog-2020.md*" como nombre). Una vez esté ahí el cursor de tu mouse, presiona el botón derecho y selecciona "*Paste*".
+Ahora, llevemos este contenido a tu website. Selecciona todo el texto, presiona el botón derecho de tu mouse y luego la opción "*copy*".
+
+Regresa a tu ambiente de desarrollo en Cloud9. 
+
+En el listado de archivos a tu izquierda, abre la carpeta llamada "*content*" y luego abre la carpeta llamada "*post*". Con el cursor del mouse sobre la carpeta "*post*", haz un click derecho para desplegar el menú auxiliar y presiona "*New File*".
+
+![enter image description here](https://github.com/hernangarcia/how-to-hugo-aws-amplify/blob/master/images/Screenshot%202020-02-24%2016.48.09.png?raw=true)
+
+Cuando se agregue el nuevo archivo, dale el nombre que desees, por ejemplo "*hoc-bog-2020.md*" y presiona la tecla "*enter*" (recuerda, el nombre puede ser el que desees, sim embargo la extensión debe ser "*.md*").
+
+![enter image description here](https://raw.githubusercontent.com/hernangarcia/how-to-hugo-aws-amplify/master/images/Screenshot%202020-02-24%2016.52.06.png)
+
+Haz doble click sobre el archivo que acabas de crear para abrirlo. Una vez esté ahí el cursor de tu mouse, presiona el botón derecho y selecciona "*Paste*".
 
 ![enter image description here](https://raw.githubusercontent.com/hernangarcia/how-to-hugo-aws-amplify/master/images/Screenshot%202020-02-24%2023.28.06.png)
 
