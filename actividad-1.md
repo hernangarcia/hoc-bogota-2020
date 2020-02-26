@@ -113,17 +113,24 @@ Tu ambiente de desarrollo debería lucir como la siguiente imagen. A la izquierd
 
 Vamos a editar la configuración de  tu nuevo website para que use estos datos de prueba:
 
- **1.** En el listado de archivos a tu izquierda, abre el archivo de configuración de HUGO haciendo click en el que se llama "*config.toml*"
+ **1.** En el listado de archivos a tu izquierda, abre el archivo de configuración de HUGO haciendo click en el que se llama "*config.toml*". Va a lucir como esta imagen a continuación:
+
+![enter image description here](https://raw.githubusercontent.com/hernangarcia/hoc-bogota-2020/master/images/hugo-config-file.png)
 
  **2.** Cambia el valor del parámetro "title" por el nombre que quieras colocarle a tu blog. Por ejemplo "Mi querido blog".
  
- **3.** Elimina la linea donde se encuentra el parámetro "*themesDir*"
+ **3.** Elimina toda la línea donde se encuentra la palabra "*themesDir*"
  
- Deja el resto de los valores por defecto. Presiona las teclas "*control*" y la tecla con la letra "*s*" al mismo tiempo para guardar el archivo. Usa la siguiente imagen como ejemplo:
+Deja el resto de los valores por defecto. Usa la siguiente imagen como ejemplo del estado final.
  
 ![enter image description here](https://raw.githubusercontent.com/hernangarcia/how-to-hugo-aws-amplify/master/images/Screenshot%202020-02-24%2016.41.48.png)
 
-Probemos cómo se ve tu nuevo website. En el menú superior de tu ambiente de desarrollo, presiona "*Preview*" y luego "*Preview Running Application*"
+Para salvar el archivo, en el menú "*File*", busca y presiona la opción "*Save*":
+
+![enter image description here](https://raw.githubusercontent.com/hernangarcia/hoc-bogota-2020/master/images/Screenshot%202020-02-26%2016.55.19.png)
+
+**Probemos cómo se ve tu nuevo website** 
+En el menú superior de tu ambiente de desarrollo, presiona "*Preview*" y luego "*Preview Running Application*"
 
 ![enter image description here](https://raw.githubusercontent.com/hernangarcia/how-to-hugo-aws-amplify/master/images/aux3.png)
 
@@ -133,9 +140,9 @@ De la ventana que se abre, copia el url que está en la barra de navegación; un
 
 ![enter image description here](https://raw.githubusercontent.com/hernangarcia/how-to-hugo-aws-amplify/master/images/aux4.png)
 
-En el siguiente comando, reemplaza el valor de "*--baseURL*" con el url que copiaste anteriormente, y ejecuta en tu terminal:
+En el siguiente comando, reemplaza el valor que estás después de "*--baseURL=*" con el url que copiaste anteriormente y ejecútalo en tu terminal:
 
-    hugo server --bind=0.0.0.0 --baseURL=https://xxxxxxxxx.vfs.cloud9.us-east-1.amazonaws.com -p 8080
+    hugo server -p 8080 --bind=0.0.0.0 --baseURL=https://xxxxxxxxx.vfs.cloud9.us-east-1.amazonaws.com
 
 Refresca la ventana de "*Preview*". Deberías ver tu nuevo website :clap: :confetti_ball: :clap:
 
@@ -177,7 +184,7 @@ Para ver como quedó, guarda la publicación presionando las teclas "*control*" 
 
 Ejecuta el siguiente comando de nuevo para visualizar tus cambios (recuerda usar el baseURL correcto):
 
-    hugo server --bind=0.0.0.0 --baseURL=https://xxxxxxxxx.vfs.cloud9.us-east-1.amazonaws.com -p 8080
+    hugo server -p 8080 --bind=0.0.0.0 --baseURL=https://xxxxxxxxx.vfs.cloud9.us-east-1.amazonaws.com
 
 Si está todo bien, en la misma venta donde donde ejecutaste el comando anterior, presiona las teclas "control" y "c" para detener la visualización de tu website. 
 
