@@ -17,10 +17,20 @@ En este laboratorio, aprenderás a utilizar las herramientas y tecnologías que 
 Si estás en un evento de AWS:
 
  1. Solicita a los facilitadores de la actividad el código de acceso de tu equipo.
- 2. Navega a [esta dirección](https://dashboard.eventengine.run/) y
- 3. Una vez allí, presiona "*AWS Console*".
+ 2. Navega a [esta dirección](https://dashboard.eventengine.run/) e ingresa el código en el campo de texto que aparece en la página y luego presiona el botón "*Accept Terms & Login*".
+
+![enter image description here](https://raw.githubusercontent.com/hernangarcia/hoc-bogota-2020/master/images/event-engine-home.png)
+
+ 3. Una vez que ingreses, en la página a continuación, presiona "*AWS Console*":
+
+![enter image description here](https://raw.githubusercontent.com/hernangarcia/hoc-bogota-2020/master/images/event-engine-team-dashboard.png)
+
+4. En la siguiente pantalla, vuelve a presionar "*AWS Console*":
+
+![enter image description here](https://raw.githubusercontent.com/hernangarcia/hoc-bogota-2020/master/images/Screenshot%202020-02-27%2013.48.31.png)
 
 ## **Configura tu ambiente de desarrollo en AWS Cloud9**
+
 Una vez que estés en la consola web de AWS, en la barra de herramientas superior, a la izquierda, despliega el menú "*Servicios*". Ingresa "*Cloud9*" en el campo de búsqueda y haz click sobre el primer resultado que aparezca.
 
 ![](https://raw.githubusercontent.com/hernangarcia/how-to-hugo-aws-amplify/master/images/Screenshot%202020-02-19%2017.11.12.png)
@@ -131,86 +141,25 @@ Para salvar el archivo, en el menú "*File*", busca y presiona la opción "*Save
 
 **Probemos cómo se ve tu nuevo website** 
 
-En el menú superior de tu ambiente de desarrollo, presiona "*Preview*" y luego "*Preview Running Application*"
+En el menú superior de tu ambiente de desarrollo, presiona "*Preview*" y luego "*Preview Running Application*". Esto abrirá una pantalla de previsualización de tu website.
 
 ![enter image description here](https://raw.githubusercontent.com/hernangarcia/how-to-hugo-aws-amplify/master/images/aux3.png)
 
-De la ventana que se abre, copia el url que está en la barra de navegación; uno parecido a este:
-
-    https://xxxxxxxxx.vfs.cloud9.us-east-1.amazonaws.com
+A continuación verás una pantalla como la siguiente:
 
 ![enter image description here](https://raw.githubusercontent.com/hernangarcia/how-to-hugo-aws-amplify/master/images/aux4.png)
 
-En el siguiente comando, reemplaza el valor que estás después de "*--baseURL=*" con el url que copiaste anteriormente y ejecútalo en tu terminal:
+En tu ambiente de desarrollo, en la pestaña que comienza con la palabra "*bash*", pega el siguiente comando sin ejecutarlo:
 
     hugo server -p 8080 --bind=0.0.0.0 --baseURL=https://xxxxxxxxx.vfs.cloud9.us-east-1.amazonaws.com
+
+Ahora, copia el url que está en la barra de navegación de la página de previsualización; uno como este:
+
+![enter image description here](https://github.com/hernangarcia/hoc-bogota-2020/blob/master/images/Screenshot%202020-02-27%2014.13.53.png?raw=true)
+
+Reemplaza el valor que estás después de "*--baseURL=*" con el url que aparece en la barra de direcciones de la pantalla anterior.
 
 Refresca la ventana de "*Preview*". Deberías ver tu nuevo website :clap: :confetti_ball: :clap:
-
-## **Vamos a crear tu primer post.**
-
-Para crear el contenido de tu primera publicación de manera visual, vamos a usar StackEdit. En una nueva ventana en tu navegador web, ingresa a stackedit.io y presiona "*Start Writing*".
-
-![enter image description here](https://raw.githubusercontent.com/hernangarcia/how-to-hugo-aws-amplify/master/images/Screenshot%202020-02-24%2016.56.22.png)
-
-StackEdit es un editor visual de Markdown. Markdown es un lenguaje que permite crear publicaciones usando un formato de texto plano, fácil de leer y fácil de escribir, y que luego puede ser convertido a HTML para publicar en internet. Empresas como Amazon, Nasa y Nike usan Markdown para generar contenido que es visto por billones de personas.
-
-Una vez que esté abierto el editor de StackEdit, vas a encontrar una pantalla como la siguiente:
-
-![enter image description here](https://raw.githubusercontent.com/hernangarcia/how-to-hugo-aws-amplify/master/images/Screenshot%202020-02-24%2017.55.12.png)
-
-Como en la imagen anterior, a tu mano izquierda vas a encontrar contenido de ejemplo escrito usando Markdown; ahí es donde vas a crear tu primera publicación. A tu derecha, puedes ver cómo lucirá el contenido en realidad.
-
-Borra todo el contenido del editor: con el cursor en la ventana de edición, presiona el botón derecho de tu mouse, luego selecciona "*Select All*" y presiona la tecla de borrar en tu teclado.
-
-En otra pestaña de tu navegador, ingresa a <a href="https://raw.githubusercontent.com/hernangarcia/how-to-hugo-aws-amplify/master/markdown-samples/sample-1.md" target="_blank">este enlace</a> y copia el contenido que ves; para esto selecciona todo el texto, presiona el botón derecho de tu mouse y selecciona "*Copy*".
-
-Regresa a la ventana de StackEdit y, en la ventana de edición, pega el texto que copiaste en el paso anterior usando el botón derecho de tu mouse para desplegar el menú de acciones y seleccionando "*Paste*".
-
-**¡Usa tu imaginación y modifica la publicación con el contenido que desees!**
-
-Ahora, llevemos este contenido a tu website. Selecciona todo el texto, presiona el botón derecho de tu mouse y luego la opción "*copy*".
-
-Regresa a tu ambiente de desarrollo en Cloud9. 
-
-En el listado de archivos a tu izquierda, abre la carpeta llamada "*content*" y luego abre la carpeta llamada "*post*". Con el cursor del mouse sobre la carpeta "*post*", haz un click derecho para desplegar el menú auxiliar y presiona "*New File*".
-
-![enter image description here](https://github.com/hernangarcia/how-to-hugo-aws-amplify/blob/master/images/Screenshot%202020-02-24%2016.48.09.png?raw=true)
-
-Cuando se agregue el nuevo archivo, dale el nombre que desees, por ejemplo "*hoc-bog-2020.md*" y presiona la tecla "*enter*" (recuerda, el nombre puede ser el que desees, sim embargo la extensión debe ser "*.md*").
-
-![enter image description here](https://raw.githubusercontent.com/hernangarcia/how-to-hugo-aws-amplify/master/images/Screenshot%202020-02-24%2016.52.06.png)
-
-Haz doble click sobre el archivo que acabas de crear para abrirlo. Una vez esté ahí el cursor de tu mouse, presiona el botón derecho y selecciona "*Paste*".
-
-![enter image description here](https://raw.githubusercontent.com/hernangarcia/how-to-hugo-aws-amplify/master/images/Screenshot%202020-02-24%2023.28.06.png)
-
-Para ver como quedó, guarda el archivo; en el menú "*File*", busca y presiona la opción "*Save*":
-
-![enter image description here](https://raw.githubusercontent.com/hernangarcia/hoc-bogota-2020/master/images/Screenshot%202020-02-26%2016.55.19.png)
-
-Ejecuta el siguiente comando de nuevo para visualizar tus cambios (recuerda usar el baseURL correcto):
-
-    hugo server -p 8080 --bind=0.0.0.0 --baseURL=https://xxxxxxxxx.vfs.cloud9.us-east-1.amazonaws.com
-
-Si está todo bien, en la misma venta donde donde ejecutaste el comando anterior, presiona las teclas "control" y "c" para detener la visualización de tu website. 
-
-Finalmente, guardemos la publicación en tu repositorio de manera permanente ejecutando los siguientes comandos. Es mejor si los ejecutas uno por uno para no equivocarte.
-
-    git add .
-    
-    git commit -m "mi primer post"
-    
-    git remote add origin https://github.com/<github-username>/<github-repository-name>.git
-    
-    git push -u origin master
-
-En el comando anterior sustituye *github-username* y *github-repository-name* con los valores
-de tu cuenta de github:
-
-![enter image description here](https://raw.githubusercontent.com/hernangarcia/how-to-hugo-aws-amplify/master/images/Screenshot%202020-02-19%2018.36.58%20copy.png)
-
-Cuando se pregunte por ellos, ingresa tu nombre de usuario de github y la contraseña.
 
 ## **Vamos a publicar tu website en la internet:**
 
