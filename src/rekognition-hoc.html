@@ -1,0 +1,263 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.283.1.min.js"></script>
+  </head>
+  <body>
+	<div class="container">  
+		<h1 style="margin:10pt 0">Demo reconocimiento facial</h1>
+		<form class="form-row">
+			<div class="col-auto">
+				<div class="form-group">
+					<label for="txtAKI">Access Key Id</label>
+					<input type="text" class="form-control" id="txtAKI" aria-describedby="emailHelp" placeholder=""/>
+				</div>
+			</div>
+			<div class="col-auto">			
+				<div class="form-group">
+					<label for="txtSAK">Secret Access Key</label>
+					<input type="text" class="form-control" id="txtSAK" aria-describedby="emailHelp" placeholder=""/>			
+				</div>
+			</div>
+		</form>
+		<div class="alert alert-danger" role="alert" id="divErrKeys" style="display:none">
+		  Por favor especifique los valores de Access Key Id y Secret Access Key
+		</div>		
+		<div class="input-group mb-3">
+		  <div class="custom-file">
+			<input type="file" class="custom-file-input" id="inputGroupFile02" accept="image/*" onchange="openPhoto(event)">
+			<label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Escoja una fotografía que contenga caras</label>
+		  </div>
+		</div>		
+		<div id="spinner" class="spinner-border spinner-border-sm" role="status" style="display:none">
+		  <span class="sr-only">Procesando...</span>
+		</div>
+		<div class="alert alert-danger" role="alert" style="display:none" id="divErrRekog">
+		  Ocurrió un error al ejecutar Amazon Rekognition
+		</div>		
+		<div id="divResult">
+		</div><br/><br/>
+		<div style="display:block"><img src="" id="imgPhoto"/></div>
+	</div>
+	<script type="text/javascript">
+
+		//Función para  invocación a Amazon Rekognition para analizar la imagen
+		function detect(photoBlob)
+		{
+			var aki = $("#txtAKI").val();
+			var sak = $("#txtSAK").val();
+			
+			//CONFIGURACIÓN AWS
+			AWS.config.update({
+			  region: 'us-east-1',
+			  credentials: new AWS.Credentials({
+				accessKeyId:aki,
+				secretAccessKey:sak
+			  })
+			});
+
+			var rekognition = new AWS.Rekognition({apiVersion: '2016-06-27'});				
+			
+			$("#divResult").html("");
+			$("#divErrKeys").hide();
+			$("#divErrRekog").hide();
+			$("#spinner").show();
+			var params = {
+			  Image: { /* required */
+				Bytes: photoBlob /* Strings will be Base-64 encoded on your behalf */
+			  },
+			  Attributes: ["ALL"/* more items */]
+			};
+			
+			rekognition.detectFaces(params, function(err, data) {
+			  if (err) {
+				$("#spinner").hide();
+				$("#divErrRekog").show();
+				console.log(err, err.stack); // an error occurred
+			  }
+			  else{     
+				console.log(data);
+				var insights = processRekognitionResult(data);
+				$("#spinner").hide();
+				$("#divResult").html(insights);
+			  }
+			});	
+		}
+
+		//Procesar todas las características que encontró Amazon Rekognition en los rostros presentes en la imagen
+		function processRekognitionResult(result)
+		{
+			if(result.FaceDetails === undefined)
+				return "Error";
+				
+			var textResult = "";
+			var faceDetail = result.FaceDetails;
+			for(var i=0;i<faceDetail.length;i++)
+			{
+				item = faceDetail[i];
+				age = processAgeRange(item);
+				emot = processEmotions(item);
+				eyes = processDetail(item,"EyesOpen","Tiene los ojos abiertos","");
+				mouth = processDetail(item,"MouthOpen","Tiene la boca abierta", "Tiene la boca cerrada");
+				mustache = processDetail(item,"Mustache","Tiene bigote","");
+				beard  = processDetail(item,"Beard","Tiene barba","");
+				eyeglasses = processDetail(item,"Eyeglasses","Tiene gafas","");
+				sunglasses = processDetail(item,"Sunglasses","Tiene gafas de sol","");
+				
+				textResult += buildResult(age,emot,eyes,mouth,mustache,beard,eyeglasses,sunglasses);
+			}
+			if (textResult=="")
+				textResult = "No se detectó ninguna característica de la cara. ¿Está seguro de que la imagen contiene rostros?";
+			else
+				textResult = "<div>Caras detectadas en la imagen: " + faceDetail.length + "</div>" + textResult;
+				
+			return textResult;
+		}
+
+		//armar lista de resultados
+		function buildResult()
+		{
+			var resultText = "";
+			for(var i=0;i<arguments.length;i++)
+			{
+				if(arguments[i]!="")
+				{
+					resultText += '<li class="list-group-item">'+ arguments[i] +'</li>';
+				}
+			}
+			if(resultText != "")
+				resultText = '<ul class="list-group list-group-horizontal">' + resultText + '</ul>';
+			
+			return resultText;
+		}
+		
+		function processAgeRange(item)
+		{
+			var result="";
+			if(item.AgeRange)
+			{
+				result = "La edad está entre " + item.AgeRange.Low + " y " + item.AgeRange.High;
+			}
+			
+			return result;
+		}
+
+		//
+		function processDetail(item,attr,text,text2)
+		{
+			var result = "";
+			var prop = item[attr];
+			if(prop)
+			{
+				var value = prop["Value"];
+				var conf = prop["Confidence"];
+				if(value == true && conf > 80)
+					result = text;
+				else if(text2 != "")
+					result = text2;
+			}
+			return result;
+		}
+
+		function processEmotions(item)
+		{
+			var result="";
+			if (item.Emotions === undefined)
+				return "";
+				
+			if(item.Emotions)
+			{
+				var maxConfidence=0;
+				var maxIndex = -1;
+
+				for(var i=0;i<item.Emotions.length;i++)
+				{
+					if(item.Emotions[i].Confidence>maxConfidence)
+					{
+						maxIndex = i;
+						maxConfidence = item.Emotions[i].Confidence;
+					}
+				}
+
+				result = getEmotion(item.Emotions[maxIndex].Type);
+			}
+			
+			if(result != "")
+				result = "Parece " + result;
+			
+			return result;
+		}
+
+		function getEmotion(emotion)
+		{
+			var emotionResult="";
+			switch(emotion)
+			{
+				case "ANGRY":
+					emotionResult = "disgustado";
+					break;
+				case "FEAR":
+					emotionResult = "asustado";
+					break;
+				case "HAPPY":
+					emotionResult = "feliz";
+					break;
+				case "SAD":
+					emotionResult = "triste";
+					break;
+				case "CALM":
+					emotionResult = "calmado";
+					break;
+				case "CONFUSED":
+					emotionResult = "confundido";
+					break;		
+				case "DISGUSTED":
+					emotionResult = "disgustado";
+					break;		
+				case "SURPRISED":
+					emotionResult = "soprendido";
+					break;			
+			}
+			
+			return emotionResult;
+		}
+
+		//evento asociado al input file para comenzar procesamiento de la imagen
+		var openPhoto = function(event) {
+			var aki = $("#txtAKI").val();
+			var sak = $("#txtSAK").val();
+
+			if(aki=="" || sak == ""){
+				$("#divErrKeys").show();
+				return;
+			}
+			else if(aki!="" && sak != ""){
+				$("#divErrKeys").hide();
+			}
+		
+			var input = event.target;
+
+			var reader = new FileReader();
+			reader.onload = function(){
+			  var photo = reader.result;
+			  detect(photo);
+			};
+			reader.readAsArrayBuffer(input.files[0]);
+
+			var reader2 = new FileReader();
+			reader2.onload = function(){
+			  document.getElementById("imgPhoto").src = reader2.result;	  
+			};	
+			var photoPreview = reader2.readAsDataURL(input.files[0]);
+
+		  };
+	</script>	
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
+
