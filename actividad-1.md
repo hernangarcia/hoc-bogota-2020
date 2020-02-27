@@ -160,6 +160,26 @@ Reemplaza el valor que estás después de "*--baseURL=*" con el url que aparece 
 
 Refresca la ventana de "*Preview*". Deberías ver tu nuevo website :clap: :confetti_ball: :clap:
 
+Si está todo bien, en la misma venta donde donde ejecutaste el comando anterior, presiona las teclas "control" y "c" para detener la visualización de tu website. 
+
+Finalmente, guardemos la publicación en tu repositorio de manera permanente ejecutando los siguientes comandos. Es mejor si los ejecutas uno por uno para no equivocarte.
+
+    git add .
+    
+    git commit -m "mi primer post"
+    
+    git remote add origin https://github.com/<github-username>/<github-repository-name>.git    
+
+En el comando anterior sustituye *github-username* y *github-repository-name* con los valores de tu cuenta de github:
+
+![enter image description here](https://raw.githubusercontent.com/hernangarcia/how-to-hugo-aws-amplify/master/images/Screenshot%202020-02-19%2018.36.58%20copy.png)
+
+Luego ejecuta el siguiente comando:
+
+    git push -u origin master
+
+Cuando se pregunte por ellos, ingresa tu nombre de usuario de github y la contraseña.
+
 ## **Vamos a publicar tu website en la internet:**
 
 En tu navegador web, regresa a la consola de AWS, despliega el menú "*Services*" y busca  "*Amplify*" en la barra de búsquedas. Al mostrar la consola de Amplify, presiona "*Get Started*" bajo el titulo "*Deploy*"
@@ -219,3 +239,4 @@ Verifica de nuevo tu website, presionando el enlace al final de la sección "*ma
 **:clap: :clap: Ya tienes tu propio Blog en la internet :clap: :clap:**
 
 Ahora vamos a agregar Inteligencia Artificial a tu website. Ingresa al siguiente enlace para comenzar la segunda parte de la actividad: [Cómo usar Inteligencia Artificial para reconocimiento facial](https://github.com/hernangarcia/hoc-bogota-2020/blob/master/actividad-2.md)
+
