@@ -175,7 +175,7 @@ Finalmente, guardemos tu nuevo website en el repositorio de código, de manera p
     
     git remote add origin https://github.com/<github-username>/<github-repository-name>.git    
 
-En el comando anterior sustituye *github-username* y *github-repository-name* con los valores de tu cuenta de github:
+En el comando anterior sustituye *<github-username>* y *<github-repository-name>* con los valores de tu cuenta de github:
 
 ![enter image description here](https://raw.githubusercontent.com/hernangarcia/how-to-hugo-aws-amplify/master/images/Screenshot%202020-02-19%2018.36.58%20copy.png)
 
