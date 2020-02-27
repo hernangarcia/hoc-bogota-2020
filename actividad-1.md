@@ -5,7 +5,6 @@ En este laboratorio, aprenderás a utilizar las herramientas y tecnologías que 
 |![github](https://desktop.github.com/images/desktop-icon.svg)|Github: te permitirá almacenar el código fuente de las aplicaciones o websites que crees.|
 | ![Cloud9](https://raw.githubusercontent.com/hernangarcia/how-to-hugo-aws-amplify/master/images/cloud9.png)| Cloud9: es un ambiente de desarrollo integrado (IDE) basado en la nube que te permite escribir, ejecutar y depurar tu código sólo con un navegador web. |
 |![Hugo](https://raw.githubusercontent.com/hernangarcia/how-to-hugo-aws-amplify/master/images/hugo.png)|Hugo: es un generador de contenido estático para construir websites y aplicaciones en internet.|
-| ![enter image description here](https://raw.githubusercontent.com/hernangarcia/how-to-hugo-aws-amplify/master/images/stackedit.png) | StackEdit: El editor para crear y dar formato a tu código fuente. |
 | ![amplify](https://raw.githubusercontent.com/hernangarcia/how-to-hugo-aws-amplify/master/images/amplify.png) | AWS Amplify: es una plataforma de desarrollo para la creación y publicación de aplicaciones móviles y web. |
 
 ---
