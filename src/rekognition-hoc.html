@@ -22,6 +22,12 @@
 					<input type="text" class="form-control" id="txtSAK" aria-describedby="emailHelp" placeholder=""/>			
 				</div>
 			</div>
+			<div class="col-auto">			
+				<div class="form-group">
+					<label for="txtSTK">Session Token</label>
+					<input type="text" class="form-control" id="txtSTK" aria-describedby="emailHelp" placeholder=""/>			
+				</div>
+			</div>			
 		</form>
 		<div class="alert alert-danger" role="alert" id="divErrKeys" style="display:none">
 		  Por favor especifique los valores de Access Key Id y Secret Access Key
@@ -49,13 +55,15 @@
 		{
 			var aki = $("#txtAKI").val();
 			var sak = $("#txtSAK").val();
+			var stk = $("#txtSTK").val();
 			
 			//CONFIGURACIÓN AWS
 			AWS.config.update({
 			  region: 'us-east-1',
 			  credentials: new AWS.Credentials({
 				accessKeyId:aki,
-				secretAccessKey:sak
+				secretAccessKey:sak,
+				sessionToken:stk
 			  })
 			});
 
@@ -105,7 +113,7 @@
 				mustache = processDetail(item,"Mustache","Tiene bigote","");
 				beard  = processDetail(item,"Beard","Tiene barba","");
 				eyeglasses = processDetail(item,"Eyeglasses","Tiene gafas","");
-				sunglasses = processDetail(item,"Sunglasses","Tiene gafas de sol","");
+				sunglasses = processDetail(item,"Sunlasses","Tiene gafas de sol","");
 				
 				textResult += buildResult(age,emot,eyes,mouth,mustache,beard,eyeglasses,sunglasses);
 			}
@@ -229,8 +237,9 @@
 		var openPhoto = function(event) {
 			var aki = $("#txtAKI").val();
 			var sak = $("#txtSAK").val();
+			var stk = $("#txtSTK").val();
 
-			if(aki=="" || sak == ""){
+			if(aki=="" || sak == "" || stk == ""){
 				$("#divErrKeys").show();
 				return;
 			}
