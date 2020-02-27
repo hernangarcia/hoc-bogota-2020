@@ -218,3 +218,5 @@ Verifica de nuevo tu website, presionando el enlace al final de la sección "*ma
     https://master.xxxxxxxx.amplifyapp.com/
 
 **:clap: :clap: Ya tienes tu propio Blog en la internet :clap: :clap:**
+
+Ahora vamos a agregar Inteligencia Artificial a tu website. Ingresa al siguiente enlace para comenzar la segunda parte de la actividad: [Cómo usar Inteligencia Artificial para reconocimiento facial](https://github.com/hernangarcia/hoc-bogota-2020/blob/master/actividad-2.md)
