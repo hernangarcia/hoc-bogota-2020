@@ -66,7 +66,7 @@ En la siguiente pantalla, presiona el botón azul que dice "*Choose free*"
 
 ![enter image description here](https://raw.githubusercontent.com/hernangarcia/how-to-hugo-aws-amplify/master/images/Screenshot%202020-02-24%2023.39.42.png)
 
-Y por última, en la siguiente pantalla, presional el enlace con el texto "Skip this step" para terminar con el proceso de creación de la cuenta de Github.
+Y por última, en la siguiente pantalla, presiona el enlace con el texto "Skip this step" para terminar con el proceso de creación de la cuenta de Github.
 
 ![enter image description here](https://raw.githubusercontent.com/hernangarcia/how-to-hugo-aws-amplify/master/images/Screenshot%202020-02-24%2023.40.11.png)
 
@@ -78,7 +78,8 @@ Deja abierta la siguiente pantalla, más adelante vas a necesitar los comandos q
 
 ![enter image description here](https://raw.githubusercontent.com/hernangarcia/how-to-hugo-aws-amplify/master/images/Screenshot%202020-02-19%2018.36.58.png)
 
-## **Vamos a crear tu nuevo Blog**
+## **Vamos a crear tu nuevo website**
+
 Regresa a tu ambiente de desarrollo en la consola de AWS, en la barra superior selecciona "Window" y presiona "*New terminal*".
 
 **Instala HUGO:**
@@ -91,6 +92,10 @@ Ejecuta los siguientes comandos en tu terminal para descargar la última versió
 Verifica que HUGO está instalado, usando este comando:
 
     hugo version
+
+Deberías ver algo como esto:
+
+![enter image description here](https://raw.githubusercontent.com/hernangarcia/hoc-bogota-2020/master/images/hugo-version.png)
 
 Crea tu nuevo website, usando el siguiente comando (puedes cambiar "myblog" por el nombre que quieras):
 
@@ -106,7 +111,7 @@ Descarga el componente que transforma tu nuevo site en un Blog:
     
     git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/gohugo-theme-ananke
 
-Agreguemos algunos datos de prueba a tu blog, ejecutando estos comandos. Es mejor si los ejecutas uno por uno para no equivocarte.
+Agreguemos algunos datos de prueba a tu website, ejecutando estos comandos. Es mejor si los ejecutas uno por uno para no equivocarte.
 
     cp themes/gohugo-theme-ananke/exampleSite/config.toml .
 
@@ -116,7 +121,7 @@ Agreguemos algunos datos de prueba a tu blog, ejecutando estos comandos. Es mejo
 
     cp themes/gohugo-theme-ananke/static/images/gohugo-default-sample-hero-image.jpg ./static/images/
 
-Tu ambiente de desarrollo debería lucir como la siguiente imagen. A la izquierda verás los directorios que conforman tu website. En esa estructura de directorios es donde vamos a estar trabajando.
+Tu ambiente de desarrollo debería lucir como la siguiente imagen. A la izquierda verás los directorios que conforman tu website; a la derecha, la pestaña que comienza con la palabra "*bash*", es tu terminal.
 
 ![enter image description here](https://raw.githubusercontent.com/hernangarcia/how-to-hugo-aws-amplify/master/images/aux2.png)
 
@@ -126,11 +131,11 @@ Vamos a editar la configuración de  tu nuevo website para que use estos datos d
 
 ![enter image description here](https://raw.githubusercontent.com/hernangarcia/hoc-bogota-2020/master/images/hugo-config-file.png)
 
- **2.** Cambia el valor del parámetro "title" por el nombre que quieras colocarle a tu blog. Por ejemplo "Mi querido blog".
+ **2.** Cambia el valor de "title" por el nombre que quieras colocarle a tu blog. Por ejemplo *title = "Mi querido blog"*.
  
  **3.** Elimina toda la línea donde se encuentra la palabra "*themesDir*"
  
-Deja el resto de los valores por defecto. Usa la siguiente imagen como ejemplo del estado final.
+Deja el resto de los valores por defecto. Usa la siguiente imagen como ejemplo.
  
 ![enter image description here](https://raw.githubusercontent.com/hernangarcia/how-to-hugo-aws-amplify/master/images/Screenshot%202020-02-24%2016.41.48.png)
 
@@ -148,7 +153,7 @@ A continuación verás una pantalla como la siguiente:
 
 ![enter image description here](https://raw.githubusercontent.com/hernangarcia/how-to-hugo-aws-amplify/master/images/aux4.png)
 
-En tu ambiente de desarrollo, en la pestaña que comienza con la palabra "*bash*", pega el siguiente comando sin ejecutarlo:
+En tu ambiente de desarrollo, en la pestaña de tu terminal, pega el siguiente comando sin ejecutarlo:
 
     hugo server -p 8080 --bind=0.0.0.0 --baseURL=https://xxxxxxxxx.vfs.cloud9.us-east-1.amazonaws.com
 
@@ -160,9 +165,9 @@ Reemplaza el valor que estás después de "*--baseURL=*" con el url que aparece 
 
 Refresca la ventana de "*Preview*". Deberías ver tu nuevo website :clap: :confetti_ball: :clap:
 
-Si está todo bien, en la misma venta donde donde ejecutaste el comando anterior, presiona las teclas "control" y "c" para detener la visualización de tu website. 
+Si está todo bien, en la misma ventana donde ejecutaste el comando anterior, presiona las teclas "control" y "c" para detener la visualización de tu website. 
 
-Finalmente, guardemos la publicación en tu repositorio de manera permanente ejecutando los siguientes comandos. Es mejor si los ejecutas uno por uno para no equivocarte.
+Finalmente, guardemos tu nuevo website en el repositorio de código, de manera permanente, ejecutando los siguientes comandos. Es mejor si los ejecutas uno por uno para no equivocarte.
 
     git add .
     
@@ -170,7 +175,7 @@ Finalmente, guardemos la publicación en tu repositorio de manera permanente eje
     
     git remote add origin https://github.com/<github-username>/<github-repository-name>.git    
 
-En el comando anterior sustituye *github-username* y *github-repository-name* con los valores de tu cuenta de github:
+En el comando anterior sustituye *<github-username>* y *<github-repository-name>* con los valores de tu cuenta de github:
 
 ![enter image description here](https://raw.githubusercontent.com/hernangarcia/how-to-hugo-aws-amplify/master/images/Screenshot%202020-02-19%2018.36.58%20copy.png)
 
@@ -178,9 +183,9 @@ Luego ejecuta el siguiente comando:
 
     git push -u origin master
 
-Cuando se pregunte por ellos, ingresa tu nombre de usuario de github y la contraseña.
+Cuando se pregunte por ellos, ingresa tu nombre de usuario de GitHub y la contraseña.	
 
-## **Vamos a publicar tu website en la internet:**
+## **Vamos a publicar tu website en la Internet:**
 
 En tu navegador web, regresa a la consola de AWS, despliega el menú "*Services*" y busca  "*Amplify*" en la barra de búsquedas. Al mostrar la consola de Amplify, presiona "*Get Started*" bajo el titulo "*Deploy*"
 
@@ -218,7 +223,7 @@ Luego de inspeccionar tu website, si encuentras algún error relacionado a las i
 
 Presiona la tecla "*control*" + la tecla con la letra "*s*", al mismo tiempo, para guardar la modificación.
 
-Ejecuta los siguientes comandos, uno por uno, para publicar tus cambios en la internet:
+Ejecuta los siguientes comandos, uno por uno, para guardar tus cambios y publicarlos en internet:
 
     git add .
 
@@ -236,7 +241,6 @@ Verifica de nuevo tu website, presionando el enlace al final de la sección "*ma
 
     https://master.xxxxxxxx.amplifyapp.com/
 
-**:clap: :clap: Ya tienes tu propio Blog en la internet :clap: :clap:**
+**:clap: :clap: Ya tienes tu propio website en la internet :clap: :clap:**
 
 Ahora vamos a agregar Inteligencia Artificial a tu website. Ingresa al siguiente enlace para comenzar la segunda parte de la actividad: [Cómo usar Inteligencia Artificial para reconocimiento facial](https://github.com/hernangarcia/hoc-bogota-2020/blob/master/actividad-2.md)
-
