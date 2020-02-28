@@ -56,6 +56,10 @@ En tu navegador de internet, visita [github.com](https://github.com)
 
 Si no tienes una cuenta, completa el formulario de registro con el nombre de usuario que desees, un correo válido y una contraseña. 
 
+:fire::fire::fire:
+**¡Recuerda el nombre de usuario y la contraseña que usaste! Los vas a necesitar más adelante.**
+:fire::fire::fire:
+
 ![enter image description here](https://raw.githubusercontent.com/hernangarcia/how-to-hugo-aws-amplify/master/images/Screenshot%202020-02-19%2018.29.46.png)
 
 Luego de ingresar tus datos, presiona el botón "*Verify*" en la siguiente pantalla, resuelve el acertijo y presiona el botón azul con el texto "*Next: Select a plan*":
@@ -175,7 +179,7 @@ Finalmente, guardemos tu nuevo website en el repositorio de código, de manera p
     
     git remote add origin https://github.com/<github-username>/<github-repository-name>.git    
 
-En el comando anterior sustituye *<github-username>* y *<github-repository-name>* con los valores de tu cuenta de github:
+En el comando anterior sustituye `<github-username>` y `<github-repository-name>` con los valores de tu cuenta de github:
 
 ![enter image description here](https://raw.githubusercontent.com/hernangarcia/how-to-hugo-aws-amplify/master/images/Screenshot%202020-02-19%2018.36.58%20copy.png)
 
@@ -187,7 +191,11 @@ Cuando se pregunte por ellos, ingresa tu nombre de usuario de GitHub y la contra
 
 ## **Vamos a publicar tu website en la Internet:**
 
-En tu navegador web, regresa a la consola de AWS, despliega el menú "*Services*" y busca  "*Amplify*" en la barra de búsquedas. Al mostrar la consola de Amplify, presiona "*Get Started*" bajo el titulo "*Deploy*"
+Desde tu ambiente de desarrollo, regresa a la consola de AWS: presiona AWS Cloud9 en el menu superior y luego Go To Your Dashboard:
+
+![enter image description here](https://raw.githubusercontent.com/hernangarcia/hoc-bogota-2020/master/images/backtoawsconsole.png)
+
+Luego, despliega el menú "*Services*" y busca  "*Amplify*" en la barra de búsquedas. Al mostrar la consola de Amplify, presiona "*Get Started*" bajo el titulo "*Deploy*"
 
 ![enter image description here](https://raw.githubusercontent.com/hernangarcia/how-to-hugo-aws-amplify/master/images/Screenshot%202020-02-19%2019.23.36.png)
 
