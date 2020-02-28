@@ -37,7 +37,7 @@ Para conectarnos de forma segura a los servicios de AWS se deben usar credencial
 
 ![Code AccessKeys](https://raw.githubusercontent.com/duvierZ/howto-rekognition-hoc2020/master/images/codeAccessKeys.png)
 
-Luego prestemos atención al código que inicia en la línea 48. Acá establecemos las credenciales de conexión a **AWS** e invocamos al servicio *Amazon Rekognition*, para que nos ayude a detectar rostros dentro de la imagen con el método *detectFaces*.
+Luego prestemos atención al código que inicia en la línea 54. Acá establecemos las credenciales de conexión a **AWS** e invocamos al servicio *Amazon Rekognition*, para que nos ayude a detectar rostros dentro de la imagen con el método *detectFaces*.
 
 ![Code DetectFaces](https://raw.githubusercontent.com/duvierZ/howto-rekognition-hoc2020/master/images/codeRekognitionCall.png)
 
