@@ -51,7 +51,7 @@ Una vez termines de revisar el código, vamos a desplegarlo y verlo en acción.
 
 Al haber creado el archivo dentro de la carpeta *static*, Hugo mostrará el html al usuario. Si ya tenías corriendo previamente el servidor de Hugo este deberá tomar automáticamente el cambio (puedes revisar la ventana de terminal). Si no tienes tu servidor de Hugo corriendo, lo puedes iniciar, recuerda usar el baseURL correcto de acuerdo a tu entorno de Cloud9
 
-	hugo server --bind=0.0.0.0 --baseURL=https://xxxxxxxxx.vfs.cloud9.us-east-1.amazonaws.com -p 8080
+	hugo server -p 8080 --bind=0.0.0.0 --baseURL=https://xxxxxxxxx.vfs.cloud9.us-east-1.amazonaws.com
 
 ![Hugo Server Running](https://raw.githubusercontent.com/duvierZ/howto-rekognition-hoc2020/master/images/runHugoServer.png)
 
