@@ -27,35 +27,15 @@ Luego de copiar el código, graba tus cambios.
 
 ![Save File](https://raw.githubusercontent.com/duvierZ/howto-rekognition-hoc2020/master/images/saveFile.png)
 
-## **Un vistazo al código**
-
-El archivo que acabas de crear es una página web en html, que contiene código JavaScript que se comunica con el servicio *Amazon Rekognition* para realizar la detección de caras en una imagen y detectar características de estos rostros, como edad aproximada, si usa o no lentes, o incluso si hay barbas :).
-
-Dale una mirada al código, en particular acá tenemos algunas secciones importantes, específicamente relacionadas a como integramos las capacidades de inteligencia artificial en nuestras aplicaciones.
-
-Para conectarnos de forma segura a los servicios de AWS se deben usar credenciales, pero no es buena idea dejarlas embebidas en el código, por lo cual solicitaremos al usuario que las ingrese en nuestra página a través de un formulario (*En este caso usaremos el Access Key y Secret Access Key. Si estás en un evento de AWS puedes encontrar tus credenciales en el enlace facilitado [acá](https://dashboard.eventengine.run/)*.
-
-![Code AccessKeys](https://raw.githubusercontent.com/duvierZ/howto-rekognition-hoc2020/master/images/codeAccessKeys.png)
-
-Luego prestemos atención al código que inicia en la línea 54. Acá establecemos las credenciales de conexión a **AWS** e invocamos al servicio *Amazon Rekognition*, para que nos ayude a detectar rostros dentro de la imagen con el método *detectFaces*.
-
-![Code DetectFaces](https://raw.githubusercontent.com/duvierZ/howto-rekognition-hoc2020/master/images/codeRekognitionCall.png)
-
-Una vez detectados los rostros, procesamos también las características que la Inteligencia Artificial detectó en esos rostros, tales como edad aproximada o el estado de ánimo probable. Este procesamiento lo puedes ver a partir de la línea 91
-
-![Code ProcessFeatures](https://raw.githubusercontent.com/duvierZ/howto-rekognition-hoc2020/master/images/codeRekognitionFeatures.png)
-
-Una vez termines de revisar el código, vamos a desplegarlo y verlo en acción.
-
 ## **Prueba en Cloud9 con HUGO**
 
-Al haber creado el archivo dentro de la carpeta *static*, Hugo mostrará el html al usuario. Si ya tenías corriendo previamente el servidor de Hugo este deberá tomar automáticamente el cambio (puedes revisar la ventana de terminal). Si no tienes tu servidor de Hugo corriendo, lo puedes iniciar, recuerda usar el baseURL correcto de acuerdo a tu entorno de Cloud9
+Al haber creado el archivo dentro de la carpeta *static*, Hugo mostrará el html al usuario. Si ya tenías corriendo previamente el servidor de Hugo este deberá tomar automáticamente el cambio (puedes revisar la ventana de terminal). Si no tienes tu servidor de Hugo corriendo, lo puedes iniciar, recuerda usar el baseURL correcto de acuerdo a tu entorno de Cloud9:
 
 	hugo server -p 8080 --bind=0.0.0.0 --baseURL=https://xxxxxxxxx.vfs.cloud9.us-east-1.amazonaws.com
 
 ![Hugo Server Running](https://raw.githubusercontent.com/duvierZ/howto-rekognition-hoc2020/master/images/runHugoServer.png)
 
-Con esto ya estamos listos para probar nuestro reconocedor de rostros. Ve al menú *Preview* y da clic en *Preview Running Application*
+Con esto ya estamos listos para probar el reconocimiento de rostros. Ve al menú *Preview* y da clic en *Preview Running Application*
 
 ![Preview running App](https://raw.githubusercontent.com/duvierZ/howto-rekognition-hoc2020/master/images/previewRunningApp.png)
 
@@ -63,11 +43,23 @@ Se te desplegará la ventana de tu blog, que creaste en el anterior laboratorio.
 
 ![Fix URL](https://raw.githubusercontent.com/duvierZ/howto-rekognition-hoc2020/master/images/previewRunningUrl.png)
 
-Se desplegará una página web, en la cual puedes ingresar las credenciales de AWS que tienes y donde puedes cargar una foto que contenga rostros
+Se desplegará la página web con la aplicación de reconocimiento de rostros.
 
 ![App Running](https://raw.githubusercontent.com/duvierZ/howto-rekognition-hoc2020/master/images/appMainPage.png)
 
-Cuando cargues la imagen vas a obtener los resultados que encontró *Amazon Rekognition*. Puedes probar a subir tus propias fotos y combinaciones (bigotes, gafas, barba, etc)
+Para conectarnos de forma segura a los servicios de AWS se deben usar credenciales, pero no es buena idea dejarlas embebidas en el código, por lo cual solicitaremos al usuario que las ingrese en nuestra página a través de un formulario. Encuentra tus credenciales en [este enlace](https://dashboard.eventengine.run/dashboard)*.
+
+Al cargar la página, presiona el botón "*AWS Console*":
+
+![enter image description here](https://raw.githubusercontent.com/hernangarcia/hoc-bogota-2020/master/images/event-engine-aws-console.png)
+
+De la pantalla que se despliegue, copia los valores de *Access Key*, *Secret Access Key* y *Session Token* (los recuadros en color rojo en la imagen siguiente):
+
+![enter image description here](https://raw.githubusercontent.com/hernangarcia/hoc-bogota-2020/master/images/aws-console-keys.png)
+
+Una vez completes las credenciales, usa el botón "*Browse*" para cargar las imágenes que quieras analizar. 
+
+Cuando cargues la foto vas a obtener los resultados que encontró *Amazon Rekognition*. Puedes probar a subir tus propias fotos y combinaciones (bigotes, gafas, barba, etc).
 
 ![Rekognition Results](https://raw.githubusercontent.com/duvierZ/howto-rekognition-hoc2020/master/images/rekognitionResults.png)
 
@@ -132,3 +124,17 @@ Si tu página de reconocimiento no carga y por el contrario te sigue llevando a 
 2. En la consola de *Amplify* selecciona en el menú de la izquierda *Rewrites and Redirects* y en la ventana que se despliega a la derecha selecciona el botón *Edit* y elimina las reglas que allí encuentras
 
 ![AmplifyRedirects](https://raw.githubusercontent.com/duvierZ/howto-rekognition-hoc2020/master/images/amplifyRedirects.png)
+
+## **Un vistazo al código**
+
+El archivo "rekognition-hoc.html" que creaste, contiene código JavaScript que se comunica con el servicio *Amazon Rekognition* para realizar la detección de caras en una imagen y detectar características de estos rostros, como edad aproximada, si usa o no lentes, o incluso si hay barbas :).
+
+Dale una mirada al código, en particular acá tenemos algunas secciones importantes, específicamente relacionadas a cómo integramos las capacidades de inteligencia artificial en nuestras aplicaciones.
+
+Prestemos atención al código que inicia en la línea 54. Acá establecemos las credenciales de conexión a **AWS** e invocamos al servicio *Amazon Rekognition*, para que nos ayude a detectar rostros dentro de la imagen con el método *detectFaces*.
+
+![Code DetectFaces](https://raw.githubusercontent.com/duvierZ/howto-rekognition-hoc2020/master/images/codeRekognitionCall.png)
+
+Una vez detectados los rostros, procesamos también las características que la Inteligencia Artificial detectó en esos rostros, tales como edad aproximada o el estado de ánimo probable. Este procesamiento lo puedes ver a partir de la línea 98
+
+![Code ProcessFeatures](https://raw.githubusercontent.com/duvierZ/howto-rekognition-hoc2020/master/images/codeRekognitionFeatures.png)
